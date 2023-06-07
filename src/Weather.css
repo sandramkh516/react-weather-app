@@ -1,0 +1,23 @@
+.form-center{
+text-align: center;
+}
+.Information{
+    border: 1px solid rgb(244, 141, 180);
+    background-color:rgba(244, 141, 180, 0.6);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    padding: 40px;
+}
+h2,p,ul{
+    text-align: center;
+}
+ul{
+    list-style: none;
+padding: 0;
+}
+.Weather canvas{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
