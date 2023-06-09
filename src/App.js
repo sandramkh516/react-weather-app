@@ -9,7 +9,7 @@ function App() {
   
       <Weather defaultCity="Tehran"/>
       <footer className="text-center mt-2 text-white">
-        This project was coded by Samaneh Mokhtari and is {""}
+        This project was coded by Samaneh Mokhtari and is {" "}
         <a
           href="https://github.com/sandramkh516/react-weather-app"
           target="_blank"
