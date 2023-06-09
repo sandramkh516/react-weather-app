@@ -55,5 +55,5 @@ export default function Weather(props){
             </div>)
         }else{
         search();
-         return
-          <div> Loading...</div>;  }}
+         return<div>Loading</div> 
+        }}
