@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
 
 export default function Weather(props){
@@ -13,6 +14,7 @@ export default function Weather(props){
          setWeather({
             ready:true,
             date:new Date(response.data.dt * 1000),
+            coordinates:response.data.coord,
             temp:response.data.main.temp,
             min:response.data.main.temp_min,
             max:response.data.main.temp_max,
@@ -50,8 +52,15 @@ export default function Weather(props){
                 <input type="submit" value="Search" className="px-5 bg-info p-1"/>
             </form>
         <br/><br/>
-        <WeatherInfo info={weather}/>
-       
+        <div className="row">
+            <div className="col-3"></div>
+            <div className="col-6">
+        <WeatherInfo info={weather} />
+        </div>
+        <div className="col-2">
+        <Forecast icon={weather.icon} coordinates={weather.coordinates} />
+        </div>
+       </div>
             </div>)
         }else{
         search();

@@ -9,7 +9,7 @@ export default function WeatherInfo(props){
              <div className="Information">
          <h2>{props.info.name}</h2>
          <FormattedDate date={props.info.date}/>
-         <WeatherIcon date={props.info.icon}/>
+         <WeatherIcon date={props.info.icon} size={64} color="yellow"/>
         <ul>
             <li>Current Temperature:<WeatherTemperature celsius={props.info.temp}/> </li>
             <li>Wind Speed: {Math.round(props.info.wind)} km/hr</li>
