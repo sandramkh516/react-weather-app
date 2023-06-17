@@ -9,7 +9,7 @@ export default function Forecast(props){
     let[forecast,setForecast]=useState(null);
     
     function handleResponse(response) {
-    console.log(response.data.daily);
+   // console.log(response.data.daily);
     setLoaded(true);
     setForecast(response.data.daily);
   }
@@ -21,16 +21,18 @@ export default function Forecast(props){
     return(
         <div className="Forecast">
             
-            {forecast.map(function(dailyForecast,index){
-                if(index<5 && index>0){
+            {forecast.map(function (dailyForecast, index) {
+                if(index<5 && index>0) {
                 return(
                      <div key={index}>
                     <WeatherForecastDay forecast={dailyForecast}/>
                     </div>
                     );
                 }
-                else{return<></>}
-            })}
+             else{
+             return null;
+            }
+         } )}
 
         
         </div>
